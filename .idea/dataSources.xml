@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="887612388">
+    <data-source source="LOCAL" name="cacheSimulation dev" uuid="727d8f02-d06c-49a8-b130-4612800e1b58">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost/cacheSimulation?useUnicode=yes&amp;characterEncoding=UTF-8</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.grails/ivy-cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.1.20.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
