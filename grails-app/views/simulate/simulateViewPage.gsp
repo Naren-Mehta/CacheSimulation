@@ -35,11 +35,21 @@
                     </div>
 
                     <div class="form-group">
-                        <h4>Simulation</h4>
+
+                        <g:render template="/common/aboutUserDetails"/>
+                        <a href="#" role="button" class="btn btn-info"
+                           data-target="#aboutUserDetails"
+                           data-toggle="modal"
+                    >About</a>
+
+                    </div>
+
+                    <div class="form-group">
+                        <h2>IP Cache Simulation Parameters</h2>
 
                         <label for="cacheType">
                             Cache Type
-                            <small style="color: gray">Enter the Cache Type '1' for Direct Mapped, '2' for Associative.</small>
+                            <small style="color: gray">Enter the Cache Type '0' for Direct Mapped, '1' for Associative.</small>
 
                         </label>
 
@@ -56,7 +66,7 @@
                         </label>
 
                         <g:select name="cacheSize" class="form-control" from="${["1", "2", "4", "8", "16"]}"
-                                  noSelection="['': '-select cache type-']" value="${simulateCO?.cacheSize}"/>
+                                  noSelection="['': '-select cache size-']" value="${simulateCO?.cacheSize}"/>
                     </div>
 
                     <div class="form-group">
@@ -73,22 +83,22 @@
 
                     <div class="form-group">
                         <label for="degreeOfAssociates">
-                            Degree of Associates
+                            Degree of Associativity
                             <small
                                     style="color: gray">Enter Degree of Associativity 1,2,4,8 or 16... [1 for direct mapped. 2, 4 , 8 for set associative . 16 for fully associative.]</small>
                         </label>
 
                         <g:select name="degreeOfAssociates" class="form-control"
                                   from="${["1", "2", "4", "8", "16"]}" value="${simulateCO?.degreeOfAssociates}"
-                                  noSelection="['': '-select Degree of Asso-']"/>
+                                  noSelection="['': '-select Degree of Associativity-']"/>
                     </div>
 
                     <div class="form-group">
                         <label for="replacementPolicy">
-                            Replacement policy
+                            Replacement Policy
 
                             <small
-                                    style="color: gray">Enter Replacement Policy 0 for random 1 for LRU</small>
+                                    style="color: gray">Enter Replacement Policy: 0 for random 1 for LRU</small>
                         </label>
 
                         <g:select name="replacementPolicy" class="form-control" from="${["0", "1"]}"
@@ -100,9 +110,9 @@
                         <label for="fileSelection">File selection menu</label>
 
                         <g:select name="fileSelection" class="form-control"
-                                  noSelection="['': '-select File selection menu -']"
+                                  noSelection="['': '-Select File Type -']"
                                   value="${simulateCO?.fileSelection}"
-                                  from="${["Hex value file", "Sys log file", "Ip Address"]}"/>
+                                  from="${["Hexadecimal address List","IP Address List"]}"/>
 
                     </div>
 
@@ -117,8 +127,8 @@
                         <label for="batch">Enter the number of Entries to process at a time</label>
 
                         <g:select name="batch" class="form-control"
-                                  from="${["2", "5", "10", "50", "100", "200", "300", "400", "500", "600", "700", "800", "900", "1000"]}"
-                                  noSelection="['': '-select batch range-']"
+                                  from="${["50", "100", "200", "300", "400", "500", "600", "700", "800", "900", "1000"]}"
+                                  noSelection="['': '-select batch size-']"
                                   value="${simulateCO?.batch}"/>
                     </div>
 

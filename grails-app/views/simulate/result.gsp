@@ -18,6 +18,11 @@
                     <g:link controller="simulate" action="simulateViewPage"
                             class="btn btn-primary">Again Simulate</g:link>
 
+                    <g:render template="/common/aboutResultPage"/>
+                    <a href="#" role="button" class="btn btn-info"
+                       data-target="#aboutResultPage"
+                       data-toggle="modal">About</a>
+
                 </div>
 
                 <div class="form-group">
