@@ -49,11 +49,11 @@
 
                         <label for="cacheType">
                             Cache Type
-                            <small style="color: gray">Enter the Cache Type '0' for Direct Mapped, '1' for Associative.</small>
+                            <small style="color: gray">Enter the Cache Type '1' for Direct Mapped, '2' for Associative.</small>
 
                         </label>
 
-                        <g:select name="cacheType" class="form-control" from="${["0", "1"]}"
+                        <g:select name="cacheType" class="form-control" from="${["1", "2"]}"
                                   noSelection="['': '-select cache type-']" value="${simulateCO?.cacheType}"/>
                     </div>
 

@@ -54,6 +54,7 @@ class SimulateService {
         String filename = webRootDir + "/uploadedFile/${simulate?.id}/" + imageName
 
         println("---------------i am hear---------------------------" + filename)
+        println("---------------simulate?.fileSelection-------------------------" + simulate?.fileSelection)
 
         FileProcess fileProcess = new FileProcess(filename);
 
@@ -98,7 +99,7 @@ class SimulateService {
             return 2
         } else if (fileSelection?.equals("File containing time stamp")) {
             return 3
-        } else if (fileSelection?.equals("Ip Address")) {
+        } else if (fileSelection?.equals("IP Address List")) {
             return 5
         } else if (fileSelection?.equals("IP address time search file")) {
             return 5
